@@ -56,8 +56,14 @@ var app = {
       //     height: 300 
     });
     $('.save').click(function () {
-      
+      $('.mark').show();
       Window.href=ca;
+    });
+    $('.mark').click(function () {
+      $('.mark').hide();
+    });
+    $('.mark div').click(function(event){
+      event.stopPropagation()
     });
     var index = Math.floor((Math.random()*hudata.length)); 
     console.log(hudata[index]);
